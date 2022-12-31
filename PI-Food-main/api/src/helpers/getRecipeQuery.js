@@ -19,6 +19,7 @@ through:{
             id: r.id,           
             summary: r.summary,
             healthScore: r.healthScore,
+            image: r.image,
             diets: r.diets.map(d=> d.name),
             steps: r.steps
         }
@@ -42,6 +43,7 @@ try {
         id: r.id,
         summary: r.summary,
         healthScore: r.healthScore,
+        image: r.image,
         diets: r.diets,
         steps: r.analyzedInstructions[0] ? r.analyzedInstructions[0].steps.map(s=> s.step).join(" ") : ''  
         }
@@ -61,4 +63,4 @@ try {
 }
 }
 
-module.exports= {getAllInfo, getRecipesApi, getRecipesDb}
+module.exports= {getAllInfo}

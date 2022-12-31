@@ -1,5 +1,5 @@
 const {getId} =require('../helpers/getRecipeId.js');
-const {getRecipesApi, getRecipesDb, getAllInfo}= require('../helpers/getRecipeQuery.js')
+const { getAllInfo}= require('../helpers/getRecipeQuery.js')
 const postRecipee= require('../helpers/postRecipe.js')
 
 const getRecipesParams= async (req, res)=>{
@@ -29,9 +29,9 @@ const getRecipesQuery= async (req, res)=>{
 }
 
 const postRecipe= async (req, res)=>{
-    const{name, summary, healthScore, diets, steps} = req.body;
+    const{name, summary, healthScore,image, diets, steps} = req.body;
     try {
-        return res.status(200).json(await postRecipee(name, summary, healthScore, steps, diets))
+        return res.status(200).json(await postRecipee(name, image, summary, healthScore, steps, diets))
     } catch (error) {
         return res.status(400).json({error: error})
     }

@@ -1,11 +1,12 @@
 const { Recipe, Diet } = require("../db");
 
-const postRecipe = async (name, summary, healthScore, steps, diets) => {
+const postRecipe = async (name, summary, image, healthScore, steps, diets) => {
   try {
     const recipe = await Recipe.create({
       name,
       summary,
       healthScore: healthScore || 0,
+      image,
       steps: steps || "no instructions registered",
     });
     console.log(name);

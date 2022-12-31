@@ -24,6 +24,10 @@ module.exports = (sequelize) => {
         max: 100
       }
     },
+    image:{
+      type: DataTypes.STRING,
+      defaultValue: 'https://cdn.pixabay.com/photo/2020/08/23/06/54/cooking-5510047_1280.png'
+    },
      steps:{
        type: DataTypes.TEXT
      }

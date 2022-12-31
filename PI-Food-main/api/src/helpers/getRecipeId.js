@@ -4,21 +4,6 @@ const {Recipe, Diet}= require('../db');
 const {API_KEY} = process.env;
 const axios = require('axios');
 
-
-// const getAllInfo= async ()=>{
-// const info= await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`)
-// const allinfo= info.data?.results.map(rec=> {
-//     return{
-//         id: rec.id,
-//         name:,
-//         summary:,
-//         healthScore:,
-//         steps:,
-//         diets: 
-//     }
-// })
-// }
-
 const getIdApi= async(id) =>{
  try {
     console.log(API_KEY)
@@ -32,6 +17,7 @@ const getIdApi= async(id) =>{
          name: api.title,
          summary:api.summary,
          healthScore:api.healthScore,
+         image: api.image,
          steps: api.instructions,
          diets: api.diets
     }
@@ -53,6 +39,7 @@ const getIdDb= async (id) =>{
             name: dbinfo.name,
             summary: dbinfo.summary,
             healthScore: dbinfo.healthScore || 'no info about Health Score',
+            image: dbinfo.image,
             steps: dbinfo.steps || 'no info about instructions',
             diets: dbinfo.diets.map(d=> d.name)
         }

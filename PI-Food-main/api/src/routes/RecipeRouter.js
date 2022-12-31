@@ -1,6 +1,6 @@
 const {Router}= require('express');
 const {getRecipesParams, getRecipesQuery, postRecipe}= require('../Controllers/RecipeController.js')
-const {validateQuery, validatePost, validateParams}= require('../Controllers/middlewares.js')
+const {validateQuery, validatePost}= require('../Controllers/middlewares.js')
 
 const router= Router();
 
