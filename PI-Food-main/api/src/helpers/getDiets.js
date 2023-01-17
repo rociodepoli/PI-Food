@@ -7,17 +7,16 @@ try {
     const prediets= await Diet.findAll();
     if(prediets.length>0) return prediets;
    const diets= [
-    'Ketogenic',
-    'Vegetarian',
-    'Lacto-Vegetarian',
-    'Ovo-Vegetarian',
-    'Vegan',
-    'Pescetarian',
-    'Paleo',
-    'Primal',
-    'Low FODMAP',
-    'Whole30',
-    'Gluten Free'
+    'ketogenic',
+    'dairy free',
+    'lacto ovo vegetarian',
+    'vegan',
+    'pescatarian',
+    'paleolithic',
+    'primal',
+    'fodmap friendly',
+    'whole 30',
+    'gluten free'
    ]
    diets.map(async d=> await Diet.findOrCreate({where: {name:d}}))
    const finddiets= await Diet.findAll()
