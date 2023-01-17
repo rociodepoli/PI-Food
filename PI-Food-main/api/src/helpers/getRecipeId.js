@@ -6,7 +6,7 @@ const axios = require('axios');
 
 const getIdApi= async(id) =>{
  try {
-    console.log(API_KEY)
+    console.log(id)
     const apidata = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`,{ 
         headers: { "Accept-Encoding": "gzip,deflate,compress" } 
     });
@@ -23,7 +23,7 @@ const getIdApi= async(id) =>{
     }
     
  } catch (error) {
-      return `ID NO EXISTENTE: ${error}`
+      return `ID NO EXISTENTE API: ${error}`
  }
 }
 
