@@ -76,7 +76,8 @@ const rootReducer = (state = initialState, action) => {
         showedrecipes: orderscore,
       };
     case "FILTER_DIET":
-      const filtered= state.showedrecipes.filter(r=> r.diets.includes(action.payload.toLowerCase()))
+      let recipes= state.allrecipes
+      let filtered= recipes.filter(r=> r.diets.includes(action.payload))
       //console.log(state.showedrecipes.map(r=> r.diets))
       return{
         ...state,

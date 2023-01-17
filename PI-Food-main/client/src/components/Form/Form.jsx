@@ -78,7 +78,7 @@ export default function Form() {
         diets: [],
         image: "",
       });
-      window.alert("RECIPE CREATED SUCCESFULLY");
+      window.alert("RECIPE SUCCESFULLY CREATED ");
       history.push("/home");
     
   };
@@ -137,7 +137,7 @@ export default function Form() {
 
           {diets.map((d) => {
             return (
-              <label>
+              <label key={d.id}>
                 <input
                   type={"checkbox"}
                   key={d.id}
