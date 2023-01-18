@@ -1,0 +1,132 @@
+.back{
+    background-image: url(https://www.blogdelfotografo.com/wp-content/uploads/2020/03/portada-comida-scaled.jpg);
+    background-size: cover;
+    min-height: 1024px;
+    max-height: 1024px;
+}
+.form{
+    margin-top: 30px;
+    margin-left: 30%;
+    /* margin-right: 40px;
+    margin-left: 60px; */
+   width: 600px;
+   height: auto;
+   max-height: 1000px;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.25);
+    background-color: rgba(98, 111, 111, 0.779);
+    
+}
+
+.title{
+    font-family:serif;
+    background-color: rgba(63, 87, 87, 0.389);
+
+}
+
+.inputsch{
+    width: 300px;
+    border-radius: 20px 0px 20px 0px;
+    border: 1px solid #08414b;
+padding-left: 1%;
+    background-color: #bbddbbcc;
+}
+
+.inputsgr{
+    width: 400px;
+    height: 200px;
+    max-width: 500px;
+    max-height: 200px;
+    border-radius: 20px 0px 20px 0px;
+    border: 1px solid #08414b;
+padding-left: 1%;
+    background-color: #bbddbbcc;
+}
+.btn{
+    border-radius: 0px 20px 0px 20px;
+    border: 1px solid #08414b;
+    width: 28%;
+    cursor: pointer;
+    margin: 10px;
+    font-size: large;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,
+    0 1px 3px rgba(0,0,0,.2);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,rgb(15, 107, 84)),to(#07473d));
+}
+
+.btn:hover{
+  color: #08414b;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,
+    0 1px 3px rgba(0,0,0,.2);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,rgb(73, 81, 79)),to(#e2f7f4));
+
+}
+.text{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    margin-top: 0%;
+}
+
+.errors{
+    color: rgb(97, 0, 0);
+    font-style: italic;
+    background-color: rgba(228, 2, 2, 0.292);
+    margin-top: 0%;
+    margin-left: 24%;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.drag__bar {
+    -webkit-appearance: none;
+    width: 60%;
+    height: 10px;
+    border-radius: 5px;
+    background:  #bbddbbcc;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .drag__bar:hover {
+    opacity: 1;
+  }
+  
+  .drag__bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #0a4931;
+    cursor: pointer;
+    box-shadow:0px 0px 11px 8px rgba(0,0,0,0.26);
+    background: url(https://www.flaticon.com/svg/vstatic/svg/59/59089.svg?token=exp=1614064733~hmac=a6f0cce2214fdb52e7df9eec24006427) #75b4c3;
+    background-size: 45%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .divind{
+    margin-top: 10px;
+  }
+
+  .divdiets{
+    width: 400px;
+    margin-left: 95px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction:row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-transform: capitalize;
+  }
+
+  .inputdiet{
+    border-radius: 20%;
+    background-color: #bbddbbcc;
+    border: solid ;
+  }

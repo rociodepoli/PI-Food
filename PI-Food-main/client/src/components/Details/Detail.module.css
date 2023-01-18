@@ -1,0 +1,81 @@
+.back{
+    background-image: url(https://www.blogdelfotografo.com/wp-content/uploads/2020/03/portada-comida-scaled.jpg);
+    background-size: cover;
+    min-height: 1024px;
+    max-height: 1024px;
+}
+
+.nav{
+    position: fixed;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(98, 111, 111, 0.389);
+
+}
+.divinfo{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.firstblock{
+    width: 400px;
+    margin-left: 10px;
+}
+.img{
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.health{
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgb(110, 116, 116);
+    opacity: 0.9;
+    width: 300px;
+   margin-left: 50px;
+    margin-right: 50px;
+}
+
+.diets{
+    text-align:left;
+    padding-left: 30%;
+    padding-right: 10px;
+    font-style: italic;
+}
+.secondblock{
+    margin-right: 40px;
+    margin-left: 60px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.25);
+    background-color: rgba(98, 111, 111, 0.779);
+    
+}
+
+.divtext{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+    color: rgb(1, 41, 27);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.sum{
+    padding: 5px;
+    text-align: justify;
+}
+
+.steps{
+    text-align: start;
+    padding: 10px;
+    font-style: italic;
+}

@@ -4,11 +4,12 @@ import styles from './Card.module.css'
 
 export default function Card(props) {
   return (
-    <NavLink to={`/recipes/${props.id}`}>
+    <NavLink className={styles.link} to={`/recipes/${props.id}`}>
       <div className={styles.container}>
-        
+        <div>
         <h1 className={styles.name}>{props.name}</h1>
         <img className={styles.img} src={props.image} alt={props.name} />
+        </div>
         {props.diets ? <ul className={styles.ul}>{props.diets.map((diet) => (
           <li className={styles.diets} key={diet}>{diet}</li>
         ))}</ul>

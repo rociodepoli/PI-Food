@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { NavLink, useHistory } from "react-router-dom";
 import { createRecipe, getDiets } from "../../actions/actions";
 import NavBar from "../NavBar/Navbar";
+import styles from "./Form.module.css";
 
 function validate(form) {
   let errors = {};
@@ -68,103 +69,130 @@ export default function Form() {
   };
   const submitHandler = (e) => {
     e.preventDefault();
-    
-      dispatch(createRecipe(form));
-      setForm({
-        name: "",
-        summary: "",
-        healthScore: 0,
-        steps: "",
-        diets: [],
-        image: "",
-      });
-      window.alert("RECIPE SUCCESFULLY CREATED ");
-      history.push("/home");
-    
+
+    dispatch(createRecipe(form));
+    setForm({
+      name: "",
+      summary: "",
+      healthScore: 0,
+      steps: "",
+      diets: [],
+      image: "",
+    });
+    window.alert("RECIPE SUCCESFULLY CREATED ");
+    history.push("/home");
   };
 
   return (
-    <div>
+    <div className={styles.back}>
       <NavBar />
-      <form onSubmit={(e) => submitHandler(e)}>
-        <div>
-          <label>Name:</label>
-          <input
-            type={"text"}
-            name="name"
-            key={"name"}
-            required
-            value={form.name}
-            onChange={(e) => changeHandler(e)}
-          ></input>
-          {errors.name && <p>{errors.name}</p>}
-        </div>
-        <div>
-          <label>Summary:</label>
-          <textarea
-            name="summary"
-            required
-            value={form.summary}
-            onChange={(e) => changeHandler(e)}
-          />
-          {errors.summary && <p>{errors.summary}</p>}
-        </div>
-        <div>
-          <label>Health Score: {form.healthScore}</label>
-          <input
-            value={form.healthScore}
-            name="healthScore"
-            type="range"
-            min="0"
-            max="100"
-            step={1}
-            onChange={(e) => changeHandler(e)}
-          ></input>
-        </div>
-        <div>
-          <label>How To:</label>
-          <textarea
-            name="steps"
-            required
-            value={form.steps}
-            onChange={(e) => changeHandler(e)}
-          />
-          {errors.steps && <p>{errors.steps}</p>}
-        </div>
+      <div className={styles.form}>
+        <form onSubmit={(e) => submitHandler(e)}>
+          <div className={styles.title}>
+            <h2>Create your recipe:</h2>
+          </div>
+          <div className={styles.divind}>
+            <div className={styles.text}>
+              <label>Name:</label>
+            </div>
+            <input
+              className={styles.inputsch}
+              type={"text"}
+              name="name"
+              key={"name"}
+              required
+              value={form.name}
+              onChange={(e) => changeHandler(e)}
+            ></input>
+            {errors.name && <p className={styles.errors}>{errors.name}</p>}
+          </div>
+          <div className={styles.divind}>
+            <div className={styles.text}>
+              <label>Summary:</label>
+            </div>
+            <textarea
+              className={styles.inputsgr}
+              name="summary"
+              required
+              value={form.summary}
+              onChange={(e) => changeHandler(e)}
+            />
+            {errors.summary && (
+              <p className={styles.errors}>{errors.summary}</p>
+            )}
+          </div>
+          <div className={styles.divind}>
+            <div className={styles.text}>
+              <label>Health Score: {form.healthScore}</label>
+            </div>
+            <input
+              className={styles.drag__bar}
+              value={form.healthScore}
+              name="healthScore"
+              type="range"
+              min="0"
+              max="100"
+              step={1}
+              onChange={(e) => changeHandler(e)}
+            ></input>
+          </div>
+          <div className={styles.divind}>
+            <div className={styles.text}>
+              <label>How To:</label>
+            </div>
+            <textarea
+              className={styles.inputsgr}
+              name="steps"
+              required
+              value={form.steps}
+              onChange={(e) => changeHandler(e)}
+            />
+            {errors.steps && <p className={styles.errors}>{errors.steps}</p>}
+          </div>
 
-        <div>
-          <label> Select diet type:</label>
-
-          {diets.map((d) => {
-            return (
-              <label key={d.id}>
-                <input
-                  type={"checkbox"}
-                  key={d.id}
-                  name="diets"
-                  value={d.name}
-                  onChange={(e) => dietHandler(e)}
-                />
-                {d.name}
-              </label>
-            );
-          })}
-        </div>
-        <div>
-          <label> Image URL:</label>
-          <input
-            type="url"
-            name="image"
-            placeholder="e.g.: https://example.com/example-content.jpg"
-            value={form.image}
-            onChange={(e) => changeHandler(e)}
-          />
-          {errors.image && <p>{errors.image}</p>}
-        </div>
-        <div>
-          <button type="submit">CREATE!</button>
-        </div>
-      </form>
+          <div className={styles.divind}>
+            <div className={styles.text}>
+              <label> Select diet type:</label>
+            </div>
+            <div className={styles.divdiets}>
+              {diets.map((d) => {
+                return (
+                  <label key={d.id}>
+                    <input
+                      className={styles.inputdiet}
+                      type={"checkbox"}
+                      key={d.id}
+                      name="diets"
+                      value={d.name}
+                      onChange={(e) => dietHandler(e)}
+                    />
+                    {d.name}
+                  </label>
+                );
+              })}
+            </div>
+          </div>
+          <div className={styles.divind}>
+            <div className={styles.text}>
+              <label> Image URL:</label>
+            </div>
+            <input
+              className={styles.inputsch}
+              type="url"
+              name="image"
+              placeholder="e.g.: https://example.com/example-content.jpg"
+              value={form.image}
+              onChange={(e) => changeHandler(e)}
+            />
+            {errors.image && <p className={styles.errors}>{errors.image}</p>}
+          </div>
+          <div className={styles.divind}>
+            <button className={styles.btn} type="submit">
+              CREATE!
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

@@ -7,9 +7,10 @@ export function createRecipe(payload) {
         "http://localhost:3001/recipes",
         payload
       );
+      console.log(response.data)
       return dispatch({
         type: "CREATE_RECIPE",
-        payload: response,
+        payload: response.data,
       });
     } catch (error) {
       return error;

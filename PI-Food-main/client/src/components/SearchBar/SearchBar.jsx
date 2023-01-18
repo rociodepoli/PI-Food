@@ -21,7 +21,8 @@ export default function SearchBar(props) {
   useEffect(() => {
     dispatch(getDiets());
     console.log(diets);
-  }, [dispatch]);
+  }, [dispatch, setFilter, props.setOrder, props.order]);
+
   const changeHandler = (e) => {
     props.setSearch(e.target.value);
     console.log("input", props.search);
@@ -48,9 +49,11 @@ export default function SearchBar(props) {
   const orderHandler = (e) => {
     e.preventDefault();
     if (e.target.name === "name") {
+      dispatch(getAllRecipes())
       dispatch(orderByName(e.target.value));
     }
     if (e.target.name === "score") {
+      dispatch(getAllRecipes())
       dispatch(orderByScore(e.target.value));
     }
     props.setOrder({ ...props.order, [e.target.name]: e.target.value });
@@ -141,13 +144,13 @@ export default function SearchBar(props) {
               <option value="default" disabled>
                 Filter by Diets
               </option>
-              {diets.map((d) => {
+              {diets ? diets.map((d) => {
                 return (
                   <option key={d.id} value={d.name}>
                     {d.name}
                   </option>
                 );
-              })}
+              }): ''}
             </select>
           </div>
         </div>

@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllRecipes, getDiets , orderByName} from "../../actions/actions";
 import { Pagination } from "../Pagination/Pagination";
 import styles from './Home.module.css'
+import Loading from "../Loading/Loading";
 
 export default function Home(props) {
 const dispatch= useDispatch();
@@ -77,7 +78,7 @@ setPage(pageN)
         diets={r.diets.map(d=> d)}
         />
         
-        )}) : <span>Loading...</span> 
+        )}) : <Loading/>
       }
         
       </div>

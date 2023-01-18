@@ -8,12 +8,13 @@
 
 .recipes{
     display: grid;
-    grid-template-columns: 250px 250px 250px 250px 250px;
+    grid-template-columns: 240px 240px 240px 240px 240px;
     grid-template-rows: 420px 400px;
     align-items:initial;
     justify-content: center;
     text-decoration: none;
-    margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
     /* display: flex;
     flex-wrap: wrap;
     flex-direction: row;
