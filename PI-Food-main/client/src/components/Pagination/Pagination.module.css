@@ -1,0 +1,45 @@
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 1%;
+}
+
+.botonprev{
+    padding: 0.3%;
+    width: 4.5%;
+    color: rgb(0, 10, 12);
+    border-radius: 0px 20px 0px 20px;
+    border: 1px solid #08414b;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,
+    0 1px 3px rgba(0,0,0,.2);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,rgb(151, 161, 156)),to(#bbddbb));
+cursor: pointer;
+
+}
+
+.botonnext{
+    padding: 0.3%;
+    width: 4.5%;
+    color: #012b25;
+    cursor: pointer;
+    border-radius: 20px 0px 20px 0px;
+    border: 1px solid #08414b;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,
+    0 1px 3px rgba(0,0,0,.2);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,rgb(151, 161, 156)),to(#bbddbb));
+
+}
+
+.pages{
+    padding: 0.3%;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #08414b;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,
+    0 1px 3px rgba(0,0,0,.2);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(10%,rgb(151, 161, 156)),to(#bbddbb));
+
+}

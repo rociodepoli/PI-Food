@@ -6,6 +6,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllRecipes, getDiets , orderByName} from "../../actions/actions";
 import { Pagination } from "../Pagination/Pagination";
+import styles from './Home.module.css'
 
 export default function Home(props) {
 const dispatch= useDispatch();
@@ -50,8 +51,7 @@ setPage(pageN)
 //     }
 
   return (
-    <>
-      <h1>Esto es el Home</h1>
+    <div className={styles.container}>
       <NavBar/>
       <SearchBar search={search} setSearch={setSearch} setOrder={setOrder} order={order} setPage={setPage} />
       {/* <div>
@@ -63,7 +63,7 @@ setPage(pageN)
           
         </div> */}
       <Pagination totalp={totalp} page={page} previous={previous} next={next} pagenumber={pagenumber}/>
-      <div>
+      <div className={styles.recipes}>
         {currentp.length>0 ?
          currentp.map(r=>{
           return(
@@ -81,6 +81,6 @@ setPage(pageN)
       }
         
       </div>
-    </>
+    </div>
   );
 }

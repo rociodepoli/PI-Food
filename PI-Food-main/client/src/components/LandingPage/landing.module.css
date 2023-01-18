@@ -1,0 +1,43 @@
+.container{
+    background-image: url(https://www.blogdelfotografo.com/wp-content/uploads/2020/03/portada-comida-scaled.jpg);
+    width: 100%;
+  height: 915px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div{
+    border-radius: 0.5em;
+    margin-top: 10%;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    padding: 20px ;
+    width: 30%;
+    background-color: darkslategrey;
+    opacity: 0.8;
+    /* font-family:serif; */
+    font-size:xx-large;
+}
+
+.title{
+    font-family: cursive;
+    color: rgb(3, 34, 54);
+}
+
+.btn{
+border-radius: 10%;
+background-color: black;
+color: rgb(125, 185, 185);
+font-family: cursive;
+cursor: pointer;
+font-size: large;
+}
+
+.btn:hover{
+    background-color: rgb(125, 185, 185);
+    color: black;
+    transition-delay: 0.2s;
+    transition: 0.5s;
+
+}

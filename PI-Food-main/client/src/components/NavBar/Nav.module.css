@@ -1,0 +1,23 @@
+.container{
+    background-color: darkslategrey;
+    opacity: 0.9;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.link{
+    color: black;
+    text-decoration: none;
+    font-style: inherit;
+    font-weight: bolder;
+    
+}
+
+.link:hover{
+    
+    background-color: black;
+    color: darkslategrey;
+    border-radius: 10%;
+    
+}

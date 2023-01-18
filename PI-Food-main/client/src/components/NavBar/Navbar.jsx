@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import styles from './Nav.module.css'
 
 export default function NavBar() {
  
 
   return (
-    <nav>
-      <div>
-        <NavLink to={"/home"}>HOME</NavLink>
+    <nav className={styles.container}>
+      <div >
+        <NavLink className={styles.link} to={"/home"}>HOME</NavLink>
       </div>
-      <div>
-        <NavLink to={"/createRecipe"}>CREATE YOUR RECIPE</NavLink>
+      <div >
+        <NavLink className={styles.link} to={"/createRecipe"}>CREATE YOUR RECIPE</NavLink>
       </div>
     </nav>
   );
